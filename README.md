@@ -2,11 +2,17 @@
 
 # Hexwreck
 
-**Privacy:** <https://rvisc.github.io/hexwreck/privacy.html>
+## Privacy
 
-L'informativa sulla privacy di Hexwreck, nelle sei lingue del gioco —
-italiano, English, Français, Español, Deutsch, 中文.
+<p class="lingue">
+<a href="https://rvisc.github.io/hexwreck/privacy.html#it">Italiano</a> ·
+<a href="https://rvisc.github.io/hexwreck/privacy.html#en">English</a> ·
+<a href="https://rvisc.github.io/hexwreck/privacy.html#fr">Français</a> ·
+<a href="https://rvisc.github.io/hexwreck/privacy.html#es">Español</a> ·
+<a href="https://rvisc.github.io/hexwreck/privacy.html#de">Deutsch</a> ·
+<a href="https://rvisc.github.io/hexwreck/privacy.html#zh">中文</a>
+</p>
 
-**Contatto:** <vis-k@outlook.it>
+<vis-k@outlook.it>
 
 &copy; 2026 Vis-K
