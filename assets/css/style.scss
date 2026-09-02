@@ -70,6 +70,15 @@ body {
 
 .markdown-body hr {
   background-color: var(--bordo);
+  clear: both;  // il primo separatore segue il logo, che galleggia
+}
+
+// Il rimando all'informativa chiude ogni blocco di lingua. La parola resta
+// «Privacy» in tutte e sei — decisione 64: si riconosce senza tradurla, ed
+// e' l'unico modo di non aggiungere una settima cosa da tenere allineata.
+.markdown-body .privacy {
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 // L'occhiello e' la frase corta della scheda del negozio: la prima cosa che
@@ -93,6 +102,8 @@ body {
 // e' piu' grande del testo e respira. I `·` restano spenti, o si leggono
 // come se facessero parte dei nomi.
 .markdown-body .lingue {
+  clear: both;  // sotto il logo, non di fianco: accanto partirebbe rientrato
+                // e andrebbe a capo contro il margine, cioe' storto
   font-size: 1.05rem;
   line-height: 2;
   color: var(--spento);
