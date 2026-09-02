@@ -1,5 +1,6 @@
 ---
 title: Hexwreck
+permalink: /
 ---
 
 <img src="logo-vis-k.png" alt="Vis-K" class="logo-vis-k" width="76">
