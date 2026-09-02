@@ -1,0 +1,74 @@
+---
+---
+
+// Le due righe vuote qui sopra non sono un refuso: senza quel blocco Jekyll
+// non tratta questo file come una sorgente da compilare, e lo serve com'e'.
+//
+// L'importazione prende il tema e ci scrive sopra: cosi' quello che segue e'
+// **solo** cio' che cambia, e il resto resta quello di GitHub. E il nome del
+// tema arriva da `_config.yml`: senza quella riga questa importazione e' vuota
+// e il foglio di stile non compila — i due file si tengono per mano.
+@import "{{ site.theme }}";
+
+// I colori non sono scelti qui: sono quelli del gioco, copiati da
+// `src/Arena.App/Board/Palette.cs`. La pagina e' l'unico posto in cui questo
+// progetto non puo' leggerli dal codice, quindi il nome della sorgente sta
+// scritto accanto a ognuno — e' l'unico modo di ritrovarla fra sei mesi.
+:root {
+  --fondo:  #0B121E;  // Palette.Background
+  --bordo:  #355B82;  // Palette.PanelEdge
+  --testo:  #ECF3FB;  // Palette.Label
+  --spento: #7E96B2;  // Palette.Faint
+  --primo:  #4891FF;  // Palette.First
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--fondo);
+  background-image: url("../../sfondo.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  color: var(--testo);
+}
+
+// Il riquadro del testo e' scuro e **traslucido**: sotto si continuano a
+// vedere gli esagoni, che e' la ragione per cui lo sfondo c'e'. Opaco
+// sarebbe una scatola appoggiata su un'immagine.
+.markdown-body {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem 2.25rem;
+  border: 1px solid var(--bordo);
+  border-radius: 10px;
+  background: rgba(11, 18, 30, 0.82);
+  box-shadow: 0 12px 44px rgba(0, 0, 0, 0.55);
+  color: var(--testo);
+}
+
+.markdown-body h1 {
+  color: var(--testo);
+  border-bottom: 1px solid var(--bordo);
+}
+
+.markdown-body p,
+.markdown-body li,
+.markdown-body strong {
+  color: var(--testo);
+}
+
+.markdown-body a {
+  color: var(--primo);
+}
+
+// Il logo e' una **targa**: blu su crema, con la sua cornice nera. Su un
+// fondo scuro non si fonde e non deve — ci si appoggia sopra, ed e' per
+// questo che ha un'ombra invece di un bordo.
+.logo-vis-k {
+  display: block;
+  width: 92px;
+  height: auto;
+  margin: 0 0 1.25rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
