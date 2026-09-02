@@ -52,6 +52,16 @@ body {
   border-bottom: 1px solid var(--bordo);
 }
 
+// Il tema mette una riga sotto ogni intestazione. Su una pagina di sei righe
+// due righe orizzontali a due centimetri l'una dall'altra sembrano due
+// divisioni di un documento che non ha niente da dividere: quella sotto
+// «Privacy» va tolta, e resta la sola del titolo.
+.markdown-body h2 {
+  color: var(--testo);
+  border-bottom: 0;
+  margin-bottom: 0.3rem;
+}
+
 .markdown-body p,
 .markdown-body li,
 .markdown-body strong {
@@ -60,6 +70,15 @@ body {
 
 .markdown-body a {
   color: var(--primo);
+}
+
+// La riga delle sei lingue e' la sola cosa da premere di tutta la pagina:
+// e' piu' grande del testo e respira. I `·` restano spenti, o si leggono
+// come se facessero parte dei nomi.
+.markdown-body .lingue {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--spento);
 }
 
 // Il logo e' una **targa**: blu su crema, con la sua cornice nera. Su un
