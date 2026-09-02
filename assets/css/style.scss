@@ -47,19 +47,36 @@ body {
   color: var(--testo);
 }
 
-.markdown-body h1 {
-  color: var(--testo);
-  border-bottom: 1px solid var(--bordo);
-}
-
-// Il tema mette una riga sotto ogni intestazione. Su una pagina di sei righe
-// due righe orizzontali a due centimetri l'una dall'altra sembrano due
-// divisioni di un documento che non ha niente da dividere: quella sotto
-// «Privacy» va tolta, e resta la sola del titolo.
+// Il tema mette una riga sotto ogni intestazione, e qui vanno tolte tutte e
+// due. Quella sotto il titolo perche' il logo gli sta **accanto** ed e' piu'
+// alto della riga di testo: il bordo gli passerebbe attraverso. Quella sotto
+// «Privacy» perche' su una pagina corta due righe orizzontali ravvicinate
+// sembrano divisioni di un documento che non ha niente da dividere. A
+// separare ci sono i due `---` del testo, che sono la' apposta.
+.markdown-body h1,
 .markdown-body h2 {
   color: var(--testo);
   border-bottom: 0;
+}
+
+.markdown-body h1 {
+  margin-bottom: 1.2rem;
+}
+
+.markdown-body h2 {
   margin-bottom: 0.3rem;
+  clear: both;  // o «Privacy» andrebbe a incastrarsi di fianco al logo
+}
+
+.markdown-body hr {
+  background-color: var(--bordo);
+}
+
+// L'occhiello e' la frase corta della scheda del negozio: la prima cosa che
+// si legge del gioco, quindi piu' grande del resto e staccata da sopra.
+.markdown-body .occhiello {
+  font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 .markdown-body p,
@@ -84,10 +101,18 @@ body {
 // Il logo e' una **targa**: blu su crema, con la sua cornice nera. Su un
 // fondo scuro non si fonde e non deve — ci si appoggia sopra, ed e' per
 // questo che ha un'ombra invece di un bordo.
+//
+// Sta **di fianco al titolo** e non sopra: galleggia a sinistra, e il
+// paragrafo che il Markdown gli costruisce intorno non deve occupare una
+// riga sua, o fra logo e titolo si aprirebbe un buco.
 .logo-vis-k {
-  display: block;
-  width: 92px;
+  float: left;
+  width: 76px;
   height: auto;
-  margin: 0 0 1.25rem;
+  margin: 0.2rem 1.1rem 0.6rem 0;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5);
+}
+
+.markdown-body p:has(> .logo-vis-k) {
+  margin: 0;
 }
