@@ -1,0 +1,17 @@
+# La pagina pubblica di Hexwreck — https://rvisc.github.io/hexwreck/
+#
+# Due righe, e nessuna delle due è estetica per caso.
+
+# Il tema Primer disegna un'intestazione sua sopra il contenuto, ma **solo
+# quando il titolo del sito è diverso da quello della pagina**. Senza questo
+# file il titolo del sito è il nome del repository — «hexwreck», minuscolo —
+# mentre quello della pagina viene dal titolo del README, «Hexwreck»:
+# diversi per una maiuscola, quindi la condizione scatta e le intestazioni
+# diventano due. Scrivendolo uguale, la condizione non scatta e ne resta una.
+title: Hexwreck
+
+# Il tema che GitHub Pages sta già usando di suo. Scriverlo qui non cambia
+# niente oggi: lo **blocca**, così il giorno in cui il tema predefinito
+# cambia, questa pagina resta com'è invece di cambiare aspetto da sola —
+# ed è una pagina il cui indirizzo sta nella scheda del negozio.
+theme: jekyll-theme-primer
