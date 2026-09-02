@@ -127,6 +127,6 @@ Hexwreck 是两辆车在六边形棋盘上的一场短促而干脆的对决。�
 
 ---
 
-Rosario Viscardi — <vis-k@outlook.it>
+email: <vis-k@outlook.it>
 
 &copy; 2026 Vis-K
